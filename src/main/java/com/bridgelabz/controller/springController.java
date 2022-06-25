@@ -24,8 +24,14 @@ public class springController {
     public String post(@PathVariable String name){
         return "Hello"+"  "   + name + "......!";
     }
+
+
     @PostMapping("/query")
     public String share(@RequestParam String name){
+        return  "hello " +""+ name +"......!";
+    }
+    @PostMapping("shared")
+    public String shared(@RequestBody  String name){
         return  "hello " +""+ name +"......!";
     }
 }
